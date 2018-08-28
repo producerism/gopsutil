@@ -107,6 +107,11 @@ func FilterCountersWithContext(ctx context.Context) ([]FilterStat, error) {
 	return nil, errors.New("NetFilterCounters not implemented for windows")
 }
 
+// Return a list of network connections opened by a process.
+func ConnectionsPid(kind string, pid int32) ([]ConnectionStat, error) {
+	return nil, errors.New("ConnectionsPid not implemented for windows")
+}
+
 // NetProtoCounters returns network statistics for the entire system
 // If protocols is empty then all protocols are returned, otherwise
 // just the protocols in the list are returned.
